@@ -20,6 +20,6 @@ class nginx (
   String $docroot                      = $::nginx::params::docroot,
 ) inherits ::nginx::params {
   class { '::nginx::install': }
-  -> class { '::nginx::install::config': }
+  -> class { '::nginx::config': }
   ~> class { '::nginx::service': }
 }
